@@ -212,6 +212,10 @@ body {
   display: none;
 }
 
+.thankYou h1 {
+  text-align: center;
+}
+
 .jsonData {
   word-break: break-word;
   margin-top: 2rem;
@@ -236,7 +240,8 @@ body {
     padding-top: 6rem;
   }
   .thankYou h1 {
-    font-size: 20px;
+    margin-top: 1rem;
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=main.css.map */

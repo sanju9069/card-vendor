@@ -192,6 +192,9 @@ body {
 }
 .thankYou {
   display: none;
+  h1 {
+    text-align: center;
+  }
 }
 
 .jsonData {
@@ -217,7 +220,8 @@ body {
   }
   .thankYou {
     h1 {
-      font-size: 20px;
+      margin-top: 1rem;
+      font-size: 25px;
     }
   }
 }
