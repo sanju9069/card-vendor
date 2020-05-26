@@ -235,5 +235,8 @@ body {
   .wrapper .paddingTop {
     padding-top: 6rem;
   }
+  .thankYou h1 {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

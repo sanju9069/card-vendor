@@ -193,6 +193,7 @@ body {
 .thankYou {
   display: none;
 }
+
 .jsonData {
   word-break: break-word;
   margin-top: 2rem;
@@ -212,6 +213,11 @@ body {
     }
     .paddingTop {
       padding-top: 6rem;
+    }
+  }
+  .thankYou {
+    h1 {
+      font-size: 20px;
     }
   }
 }
