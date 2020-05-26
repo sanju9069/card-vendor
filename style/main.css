@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ver-hor-center-align, .wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-flex, .wrapper, .form .form-group, .form .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  background: #d4ebfd;
+  font-family: "Roboto", sans-serif;
+}
+
+.img-fluid {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.inputClass, .form .form-group input, .form .input-group .select-wrap .select-group select {
+  position: relative;
+  border: none;
+  background: transparent;
+  border-bottom: solid 2px #4d4be2;
+  outline: none;
+  padding: 0.25rem 1rem;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.commonAfter, .form .form-group::after, .form .input-group .select-wrap .select-group::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  left: 0%;
+  z-index: 9;
+  background: #a20b35;
+  bottom: 0;
+}
+
+.overFlowHid, .form .form-group, .form .input-group .select-wrap .select-group {
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.form {
+  max-width: 450px;
+  background: #fff;
+  padding: 8rem 2rem 2rem;
+  position: relative;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+  margin-top: 3rem;
+}
+
+.form .card {
+  max-width: 350px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -25%;
+}
+
+.form .form-grp-mar-padd, .form .form-group, .form .input-group, .form .btn-group {
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+.form .form-group {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form .form-group label {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 15px;
+}
+
+.form .form-group input {
+  width: 100%;
+}
+
+.form .input-group .select-wrap {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.form .input-group .select-wrap label {
+  width: 100%;
+  padding-left: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  top: -10px;
+}
+
+.form .input-group .select-wrap .select-group {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  width: 50%;
+}
+
+.form .input-group .select-wrap .select-group select {
+  width: 80%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form .input-group .select-wrap .select-group select::-ms-expand {
+  display: none;
+}
+
+.form .input-group .form-group {
+  margin-bottom: 0;
+}
+
+.form .btn-group button {
+  width: 100%;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0055d4), to(rgba(0, 85, 212, 0.1)));
+  background-image: linear-gradient(to right, #0055d4, rgba(0, 85, 212, 0.1));
+  color: #fff;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-size: 200%;
+  border-radius: 0.25rem;
+}
+
+.form .btn-group button:hover {
+  background-position: right;
+}
+
+.form .focus > label {
+  bottom: 30px;
+  font-size: 12px;
+}
+
+.focus::after {
+  width: 100% !important;
+}
+
+.select-group.focus::after {
+  width: 80% !important;
+}
+
+.focus select {
+  border: none !important;
+}
+
+.smallLabel label {
+  font-size: 12px;
+}
+
+.errorMsg {
+  position: absolute;
+  bottom: -15px;
+  font-size: 12px;
+  left: 15px;
+  color: red;
+  display: none;
+}
+
+.thankYou {
+  display: none;
+}
+
+.jsonData {
+  word-break: break-word;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.paddingTop {
+  padding-top: 12rem;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+  .wrapper .form {
+    padding: 3rem 1rem 2rem;
+  }
+  .wrapper .form .card {
+    max-width: 220px;
+  }
+  .wrapper .paddingTop {
+    padding-top: 6rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
