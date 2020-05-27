@@ -13,11 +13,14 @@ const cardYearError = document.getElementById("cardYearError");
 const cardCvvError = document.getElementById("cardCvvError");
 const errorMsg = document.querySelectorAll(".errorMsg");
 
+// for each function to get all input and select element
 const forEach = (ele, action, funName) => {
   ele.forEach((vl) => {
     vl.addEventListener(action, funName);
   });
 };
+
+//input focus function
 const focus = (e) => {
   let parent = e.target.parentNode;
   let grPar = e.target.parentNode.parentNode;
@@ -26,6 +29,8 @@ const focus = (e) => {
   }
   parent.classList.add("focus");
 };
+
+// input blur funtion
 const blur = (e) => {
   let parent = e.target.parentNode;
   let grPar = e.target.parentNode.parentNode;
@@ -35,6 +40,8 @@ const blur = (e) => {
     grPar.classList.remove("smallLabel");
   }
 };
+
+//log function
 const trace = (ev) => {
   console.log(ev);
 };
@@ -44,16 +51,19 @@ forEach(inputs, "blur", blur);
 forEach(selects, "focus", focus);
 forEach(selects, "blur", blur);
 
+// hide error message function
 const hideError = () =>
   errorMsg.forEach((val) => {
     val.style.display = "none";
   });
 
+// display error message function
 const errorMsgFunc = (ele, visibilty, msg) => {
   ele.style.display = visibilty;
   ele.innerText = msg;
 };
 
+// submit function of form
 const submitFunc = (e) => {
   e.preventDefault();
   let cardRegex = new RegExp("^[0-9]+$");
@@ -96,14 +106,13 @@ const submitFunc = (e) => {
     return false;
   }
   hideError();
-  let dataObject = 
-    {
-      number: cardNumber.value,
-      name: cardName.value,
-      month: cardMonth.value,
-      year: cardYear.value,
-      cvv: cvv.value,
-    };
+  let dataObject = {
+    number: cardNumber.value,
+    name: cardName.value,
+    month: cardMonth.value,
+    year: cardYear.value,
+    cvv: cvv.value,
+  };
   inputs.forEach((vl) => (vl.value = ""));
   trace(dataObject);
   document.getElementById("formWrap").style.display = "none";
@@ -111,10 +120,16 @@ const submitFunc = (e) => {
   document.querySelector(".form").classList.add("paddingTop");
   const pre = document.createElement("p");
   pre.setAttribute("class", "jsonData");
-  document.getElementById("thankYouMsg").appendChild(pre).innerText = JSON.stringify(dataObject);
-
+  document
+    .getElementById("thankYouMsg")
+    .appendChild(pre).innerText = JSON.stringify(dataObject);
 };
 
+// eventlistner on submit button
+submitBtn.addEventListener("click", submitFunc);
+
+
+// allow to input only number function
 const checkDigit = (event) => {
   let code = event.which ? event.which : event.keyCode
   if ((code < 48 || code > 57) && code > 31) {
@@ -122,5 +137,3 @@ const checkDigit = (event) => {
   }
   return true;
 };
-
-submitBtn.addEventListener("click", submitFunc);
